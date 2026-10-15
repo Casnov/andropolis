@@ -18,8 +18,8 @@ android {
         versionCode = 8
         versionName = "0.1.7"
 
-        // Build for the emulator (x86_64) and real 64-bit devices (arm64).
-        ndk { abiFilters += listOf("x86_64", "arm64-v8a") }
+        // Build for the real 32-bit devices (arm32).
+        ndk { abiFilters += listOf("armeabi-v7a") }
         externalNativeBuild {
             cmake { arguments += listOf("-DANDROID_STL=c++_shared") }
         }
